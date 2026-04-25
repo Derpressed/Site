@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: trip-tracker
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
+      - key: DataDirectory
+        value: /app/App_Data
